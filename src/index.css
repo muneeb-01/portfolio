@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "FOUNDERSGROTESK";
+  src: url("/Fonts/FoundersGrotesk-Semibold.ttf");
+}
+@font-face {
+  font-family: "NEUE-MONTREAL";
+  src: url("/Fonts/NeueMontreal-Regular.ttf");
+}
+
+* {
+  user-select: none;
+  font-family: "NEUE-MONTREAL";
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #18181b;
+  border-radius: 20px;
+}
