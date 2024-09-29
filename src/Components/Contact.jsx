@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const [firstName, setfirstName] = useState("");
@@ -87,9 +88,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-[100vh] w-full flex justify-center items-center bg-zinc-900 py-[8vh] px-[3.2vw]">
+    <div className="h-[100vh] w-full flex justify-center items-center bg-zinc-900 py-[8vh] px-[3.2vw] max-sm:px-[2vw]">
       <ToastContainer />
-      <div className="w-1/2 h-full flex flex-col justify-between text-white">
+      <div className="w-1/2 h-full flex flex-col justify-between text-white max-sm:hidden">
         <div>
           {["Excited", "to Work", "Together"].map((item, idx) => {
             return (
@@ -105,8 +106,11 @@ const Contact = () => {
           MUNEEB MUGHAL
         </h3>
       </div>
-      <div className="w-1/2 h-full flex justify-center items-center border-l-2">
-        <form onSubmit={handleOnSubmit} className="max-w-md mx-auto">
+      <div className="w-1/2 h-full flex justify-center items-center border-l-2 max-sm:w-full max-sm:border-none">
+        <form
+          onSubmit={handleOnSubmit}
+          className="max-w-md max-sm:w-full max-sm:px-[3vw] mx-auto"
+        >
           <div className="grid md:grid-cols-2 md:gap-6">
             <div className="relative z-0 w-full mb-5 group">
               <input

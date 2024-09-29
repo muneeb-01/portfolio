@@ -21,11 +21,8 @@ function App() {
       setIsLoading(false);
     }, 2200);
 
-    return () => {
-      clearTimeout(timeout);
-    };
+    return () => clearTimeout(timeout);
   }, []);
-
   return (
     <div
       className={`w-full min-h-screen text-gray-50 bg-zinc-900  ${
