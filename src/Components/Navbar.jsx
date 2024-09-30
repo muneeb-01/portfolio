@@ -36,7 +36,6 @@ function Navbar() {
 
   const scrollToComponent = (id) => {
     const element = document.getElementById(id);
-
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -90,7 +89,7 @@ function Navbar() {
           >
             {navOptions.map((item, idx) => {
               return (
-                <div>
+                <div key={idx}>
                   {idx < 3 ? (
                     <a
                       onClick={() => scrollToComponent(item.route)}
@@ -177,15 +176,26 @@ function Navbar() {
               <div
                 key={idx}
                 onClick={() => {
-                  scrollToComponent(item.route);
                   setResNav(false);
                   document.body.style.overflowY = "scroll";
                 }}
                 className="masker flex items-center"
               >
-                <a className="uppercase font-FOUNDERSGROTESK  text-nowrap tracking-tight leading-[6.6vw] text-[9vw] max-md:text-[20vw] max-md:leading-[13.5vw]">
-                  {item.name}
-                </a>
+                {idx < 3 ? (
+                  <a
+                    onClick={() => scrollToComponent(item.route)}
+                    className="uppercase font-FOUNDERSGROTESK  text-nowrap tracking-tight leading-[6.6vw] text-[9vw] max-md:text-[20vw] max-md:leading-[13.5vw]"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.route}
+                    className="uppercase font-FOUNDERSGROTESK  text-nowrap tracking-tight leading-[6.6vw] text-[9vw] max-md:text-[20vw] max-md:leading-[13.5vw]"
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </div>
             );
           })}
