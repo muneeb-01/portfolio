@@ -8,7 +8,6 @@ function Marquee() {
         <motion.h1
           initial={{ x: "0" }}
           animate={{ x: "-100%" }}
-          
           transition={{ repeat: Infinity, ease: "linear", duration: "12" }}
           className=" uppercase text-nowrap pl-5 md:pl-10 font-FOUNDERSGROTESK tracking-[-0.025em]"
         >
@@ -19,6 +18,14 @@ function Marquee() {
           animate={{ x: "-100%" }}
           transition={{ repeat: Infinity, ease: "linear", duration: "12" }}
           className=" uppercase text-nowrap pl-5 md:pl-10 font-FOUNDERSGROTESK tracking-[-0.025em] "
+        >
+          Lets WORK TOGETHER
+        </motion.h1>
+        <motion.h1
+          initial={{ x: "0" }}
+          animate={{ x: "-100%" }}
+          transition={{ repeat: Infinity, ease: "linear", duration: "12" }}
+          className="max-2xl:hidden bg-red-600 uppercase text-nowrap pl-5 md:pl-10 font-FOUNDERSGROTESK tracking-[-0.025em] "
         >
           Lets WORK TOGETHER
         </motion.h1>
